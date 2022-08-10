@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "watch": "ng build && http-server ./docs -a localhost -p 8080",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -34,6 +35,7 @@
     "@types/node": "^12.12.58",
     "codelyzer": "^6.0.0",
     "http-proxy": "1.18.1",
+    "http-server": "^14.1.1",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.4.0",
