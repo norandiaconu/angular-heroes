@@ -12,6 +12,7 @@ h1 {
   body {
     margin: 1.3em;
     margin-left: 2em;
+    background-color: black;
   }
   body, input[type="text"], button {
     color: #333;

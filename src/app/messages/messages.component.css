@@ -10,12 +10,12 @@ button {
 button:hover {
     background-color: #eee;
     cursor: pointer;
-    color: #607d8b;
+    color: darkred;
 }
 button.clear {
     height: 80px;
     font-family: Arial;
-    background-color: #eee;
+    background-color: grey;
     border: none;
     padding: 5px 10px;
     border-radius: 4px;

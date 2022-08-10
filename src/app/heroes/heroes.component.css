@@ -14,6 +14,7 @@
     padding: .3em 0;
     height: 1.6em;
     border-radius: 4px;
+    background-color: grey;
   }
   .heroes li:hover {
     color: #607D8B;
@@ -59,7 +60,7 @@
     left: 194px;
     top: 1px;
     height: 2.5em;
-    background-color: gray !important;
+    background-color: darkred;
     color: white;
   }
   button.add {
