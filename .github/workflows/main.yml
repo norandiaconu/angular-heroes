@@ -1,0 +1,27 @@
+name: Run tests
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: run install
+        run: yarn install --frozen-lockfile
+
+      - name: run linter
+        run: yarn lint
+
+      - name: run tests
+        run: yarn test -- --watch=false
+
+      - name: tests passed
+        if: ${{ success() }}
+        run: echo tests passed
+
+      - name: tests failed
+        if: ${{ failure() }}
+        run: echo tests failed
