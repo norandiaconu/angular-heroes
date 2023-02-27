@@ -8,7 +8,6 @@ module.exports = function (config) {
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
-      require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular-devkit/build-angular/plugins/karma')
     ],
@@ -16,8 +15,8 @@ module.exports = function (config) {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     coverageIstanbulReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-tour-of-heroes'),
-      reports: ['html', 'lcovonly', 'text'],
+      dir: require('path').join(__dirname, './coverage'),
+      reports: ['lcov', 'text'],
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'coverage-istanbul'],
@@ -27,6 +26,7 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['ChromeHeadless'],
     singleRun: false,
-    restartOnFileChange: true
+    restartOnFileChange: true,
+    browserConsoleLogOptions: {level: 'log'}
   });
 };
