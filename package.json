@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build && start http://localhost:8080 && http-server ./docs -a localhost -p 8080",
     "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -34,20 +33,15 @@
     "@angular/cli": "^14.2.10",
     "@angular/compiler-cli": "^14.2.12",
     "@types/jasmine": "~3.6.0",
-    "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.12.58",
     "@typescript-eslint/eslint-plugin": "5.43.0",
     "@typescript-eslint/parser": "5.43.0",
     "eslint": "^8.28.0",
     "http-server": "^14.1.1",
-    "jasmine-core": "~3.6.0",
-    "jasmine-spec-reporter": "~5.0.0",
     "karma": "^6.4.1",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
-    "protractor": "~7.0.0",
-    "ts-node": "~7.0.0",
     "typescript": "~4.6.4"
   }
 }
