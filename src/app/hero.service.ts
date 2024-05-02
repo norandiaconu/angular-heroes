@@ -3,7 +3,7 @@ import { Hero } from "./hero";
 import { Observable, of } from "rxjs";
 import { MessageService } from "./message.service";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
-import { catchError, map, tap } from "rxjs/operators";
+import { catchError, tap } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root"
@@ -21,7 +21,7 @@ export class HeroService {
   getHeroes(): Observable<Hero[]> {
     //TODO: send the message after fetching the heroes
     return this.http.get<Hero[]>(this.heroesUrl).pipe(
-      tap(_ => this.log("fetched heroes")), catchError(this.handleError<Hero[]>("getHeroes", []))
+      tap(() => this.log("fetched heroes")), catchError(this.handleError<Hero[]>("getHeroes", []))
     );
   }
 
@@ -29,7 +29,7 @@ export class HeroService {
     //TODO: send the message after fetching the hero
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url).pipe(
-      tap(_ => this.log(`fetched hero id=${id}`)), catchError(this.handleError<Hero>(`getHero id=${id}`))
+      tap(() => this.log(`fetched hero id=${id}`)), catchError(this.handleError<Hero>(`getHero id=${id}`))
     );
   }
 
@@ -46,7 +46,7 @@ export class HeroService {
 
   updateHero (hero: Hero): Observable<Hero> {
     return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap(_ => this.log(`updated hero id=${hero.id}`)), catchError(this.handleError<any>("updateHero"))
+      tap(() => this.log(`updated hero id=${hero.id}`)), catchError(this.handleError<any>("updateHero"))
     );
   }
 
@@ -60,7 +60,7 @@ export class HeroService {
     const id = typeof hero === "number" ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
     return this.http.delete<Hero>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted hero id=${id}`)), catchError(this.handleError<Hero>("deleteHero"))
+      tap(() => this.log(`deleted hero id=${id}`)), catchError(this.handleError<Hero>("deleteHero"))
     );
   }
 
@@ -69,7 +69,7 @@ export class HeroService {
       return of([]);
     }
     return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
-      tap(_ => this.log(`found heroes matching "${term}"`)), catchError(this.handleError<Hero[]>("searchHeroes", []))
+      tap(() => this.log(`found heroes matching "${term}"`)), catchError(this.handleError<Hero[]>("searchHeroes", []))
     );
   }
 }
