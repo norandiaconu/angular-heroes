@@ -38,15 +38,15 @@ export class HeroService {
   }
 
   private handleError<T> (operation = "operation", result?: T) {
-    return (error): Observable<T> => {
+    return (error: { message: string; }): Observable<T> => {
       this.log(`${operation} failed: ${error.message}`);
       return of(result);
     };
   }
 
   updateHero (hero: Hero): Observable<Hero> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap(() => this.log(`updated hero id=${hero.id}`)), catchError(this.handleError<any>("updateHero"))
+    return this.http.put<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+      tap(() => this.log(`updated hero id=${hero.id}`)), catchError(this.handleError<Hero>("updateHero"))
     );
   }
 
