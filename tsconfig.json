@@ -19,22 +19,11 @@
       "dom"
     ],
     "useDefineForClassFields": false,
-    "types": [],
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strict": true
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  },
-  "files": [
-    "src/main.ts",
-    "src/polyfills.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
-  ],
-  "exclude": [
-    "src/test.ts",
-    "src/**/*.spec.ts"
-  ]
+  }
 }

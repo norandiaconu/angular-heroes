@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, waitForAsync } from "@angular/core/testing";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 import { HeroDetailComponent } from "./hero-detail.component";
+import { FormsModule } from "@angular/forms";
 
 describe("HeroDetailComponent", () => {
   let component: HeroDetailComponent;
@@ -9,7 +10,7 @@ describe("HeroDetailComponent", () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [RouterTestingModule, HttpClientTestingModule, FormsModule],
       declarations: [HeroDetailComponent],
     }).compileComponents();
   }));

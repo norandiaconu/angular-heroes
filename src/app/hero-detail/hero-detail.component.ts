@@ -10,7 +10,7 @@ import { HeroService } from "../hero.service";
   styleUrls: ["./hero-detail.component.css"]
 })
 export class HeroDetailComponent implements OnInit {
-  hero: Hero;
+  hero: Hero = new Hero;
 
   constructor(
     private readonly route: ActivatedRoute,
