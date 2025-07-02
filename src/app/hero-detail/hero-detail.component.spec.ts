@@ -10,8 +10,12 @@ describe('HeroDetailComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            imports: [RouterTestingModule, HttpClientTestingModule, FormsModule],
-            declarations: [HeroDetailComponent],
+            imports: [
+                RouterTestingModule,
+                HttpClientTestingModule,
+                FormsModule,
+                HeroDetailComponent,
+            ],
         }).compileComponents();
     }));
 

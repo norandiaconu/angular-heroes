@@ -13,14 +13,16 @@ Happy linting! 💖
 */
 module.exports = {
     ignorePatterns: [
-        "android/",
         "coverage/",
         "docs/",
+        "environments/",
         ".eslintrc.js",
-        "capacitor.config.ts",
+        "app-routing.module.ts",
         "index.js",
         "jest.config.js",
         "main.ts",
+        "polyfills.ts",
+        "setup-jest.ts",
     ],
     env: {
         browser: true,
@@ -42,8 +44,6 @@ module.exports = {
         "@typescript-eslint",
         "@typescript-eslint/tslint",
         "@angular-eslint",
-        "eslint-plugin-jsdoc",
-        "eslint-plugin-prefer-arrow",
     ],
     root: true,
     rules: {

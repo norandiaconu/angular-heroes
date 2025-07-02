@@ -9,8 +9,7 @@ describe('HeroSearchComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            imports: [HttpClientTestingModule],
-            declarations: [HeroSearchComponent],
+            imports: [HttpClientTestingModule, HeroSearchComponent],
         }).compileComponents();
     }));
 
