@@ -9,8 +9,7 @@ import { FormsModule } from '@angular/forms';
     selector: 'app-hero-detail',
     templateUrl: './hero-detail.component.html',
     styleUrls: ['./hero-detail.component.css'],
-    standalone: true,
-    imports: [FormsModule, UpperCasePipe],
+    imports: [FormsModule, UpperCasePipe]
 })
 export class HeroDetailComponent implements OnInit {
     protected hero: Hero = new Hero();

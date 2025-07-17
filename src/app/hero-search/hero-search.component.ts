@@ -10,8 +10,7 @@ import { RouterLink } from '@angular/router';
     selector: 'app-hero-search',
     templateUrl: './hero-search.component.html',
     styleUrls: ['./hero-search.component.css'],
-    standalone: true,
-    imports: [RouterLink, AsyncPipe],
+    imports: [RouterLink, AsyncPipe]
 })
 export class HeroSearchComponent {
     protected heroes$: Observable<Hero[]>;

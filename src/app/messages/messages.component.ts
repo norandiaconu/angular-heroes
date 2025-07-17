@@ -6,7 +6,6 @@ import { MessageService } from '../message.service';
     selector: 'app-messages',
     templateUrl: './messages.component.html',
     styleUrls: ['./messages.component.css'],
-    standalone: true,
     imports: []
 })
 export class MessagesComponent {    messageService = inject(MessageService);

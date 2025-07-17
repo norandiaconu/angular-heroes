@@ -9,8 +9,7 @@ import { HeroSearchComponent } from '../hero-search/hero-search.component';
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
     styleUrls: ['./dashboard.component.css'],
-    standalone: true,
-    imports: [RouterLink, HeroSearchComponent],
+    imports: [RouterLink, HeroSearchComponent]
 })
 export class DashboardComponent implements OnInit {
     protected heroes: Hero[] = [];

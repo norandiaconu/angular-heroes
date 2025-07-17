@@ -7,8 +7,7 @@ import { RouterLink } from '@angular/router';
     selector: 'app-heroes',
     templateUrl: './heroes.component.html',
     styleUrls: ['./heroes.component.css'],
-    standalone: true,
-    imports: [RouterLink],
+    imports: [RouterLink]
 })
 export class HeroesComponent implements OnInit {
     protected heroes: Hero[] = [];
