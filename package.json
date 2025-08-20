@@ -1,6 +1,6 @@
 {
     "name": "angular-tour-of-heroes",
-    "version": "19.0.0",
+    "version": "19.0.1",
     "scripts": {
         "start": "ng serve",
         "build": "ng build && vite preview --port 8080 --outDir ./docs/browser --open",
@@ -33,6 +33,7 @@
         "eslint-plugin-import": "~2.31.0",
         "jest": "~29.7.0",
         "jest-preset-angular": "~14.5.5",
+        "prettier": "~3.6.2",
         "typescript": "~5.5.4"
     }
 }
