@@ -1,6 +1,6 @@
 {
     "name": "angular-tour-of-heroes",
-    "version": "19.0.1",
+    "version": "19.0.2",
     "scripts": {
         "start": "ng serve",
         "build": "ng build && vite preview --port 8080 --outDir ./docs/browser --open",

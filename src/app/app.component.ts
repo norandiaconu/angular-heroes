@@ -9,5 +9,5 @@ import { MessagesComponent } from './messages/messages.component';
     imports: [RouterLink, RouterOutlet, MessagesComponent]
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
+    protected title = 'Tour of Heroes';
 }

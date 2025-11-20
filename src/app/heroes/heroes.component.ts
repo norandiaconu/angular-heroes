@@ -14,13 +14,11 @@ export class HeroesComponent implements OnInit {
 
     private readonly heroService = inject(HeroService);
 
-    getHeroes(): void {
-        this.heroService
-            .getHeroes()
-            .subscribe((heroes) => (this.heroes = heroes));
+    ngOnInit() {
+        this.getHeroes();
     }
 
-    add(name: string): void {
+    protected add(name: string): void {
         name = name.trim();
         if (!name) {
             return;
@@ -30,12 +28,12 @@ export class HeroesComponent implements OnInit {
         });
     }
 
-    delete(hero: Hero): void {
+    protected delete(hero: Hero): void {
         this.heroes = this.heroes.filter((h) => h !== hero);
         this.heroService.deleteHero(hero).subscribe();
     }
 
-    ngOnInit() {
-        this.getHeroes();
+    private getHeroes(): void {
+        this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
     }
 }

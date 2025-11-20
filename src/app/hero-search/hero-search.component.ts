@@ -27,7 +27,7 @@ export class HeroSearchComponent {
         );
     }
 
-    search(term: string): void {
+    protected search(term: string): void {
         this.searchTerms.next(term);
     }
 }

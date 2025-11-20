@@ -28,15 +28,15 @@ describe('InMemoryDataService', () => {
     });
 
     it('should createDb', () => {
-        expect(service.createDb()).toEqual({heroes});
+        expect(service.createDb()).toEqual({ heroes });
     });
 
     it('should genId', () => {
-        expect(service.genId(heroes)).toEqual(21);
+        expect(service['genId'](heroes)).toEqual(21);
     });
 
     it('should genId with empty list', () => {
         heroes = [];
-        expect(service.genId(heroes)).toEqual(11);
+        expect(service['genId'](heroes)).toEqual(11);
     });
 });

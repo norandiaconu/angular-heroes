@@ -1,7 +1,7 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HeroSearchComponent } from '../hero-search/hero-search.component';
 import { DashboardComponent } from './dashboard.component';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('DashboardComponent', () => {
     let component: DashboardComponent;
@@ -9,11 +9,8 @@ describe('DashboardComponent', () => {
 
     beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
-            imports: [
-                HttpClientTestingModule,
-                DashboardComponent,
-                HeroSearchComponent,
-            ],
+            imports: [DashboardComponent, HeroSearchComponent],
+            providers: [provideHttpClient()]
         }).compileComponents();
     }));
 
