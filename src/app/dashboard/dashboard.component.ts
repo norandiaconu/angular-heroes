@@ -14,7 +14,7 @@ import { HeroSearchComponent } from '../hero-search/hero-search.component';
 export class DashboardComponent implements OnInit {
     protected heroes: Hero[] = [];
 
-    private heroService = inject(HeroService);
+    private readonly heroService = inject(HeroService);
 
     ngOnInit() {
         this.getHeroes();
