@@ -1,10 +1,10 @@
 {
     "name": "angular-tour-of-heroes",
-    "version": "21.0.0",
+    "version": "21.0.1",
     "scripts": {
         "start": "ng serve",
         "build": "ng build && vite preview --port 8080 --outDir ./docs/browser --open",
-        "test": "jest",
+        "test": "ng test",
         "lint": "eslint ."
     },
     "private": true,
@@ -16,7 +16,7 @@
         "@angular/platform-browser": "^21.2.0",
         "@angular/platform-browser-dynamic": "^21.2.0",
         "@angular/router": "^21.2.0",
-        "rxjs": "~6.6.3",
+        "rxjs": "~7.8.2",
         "zone.js": "~0.15.1"
     },
     "devDependencies": {
@@ -24,17 +24,15 @@
         "@angular/build": "^21.2.0",
         "@angular/cli": "^21.2.0",
         "@angular/compiler-cli": "^21.2.0",
-        "@types/jest": "~30.0.0",
         "@typescript-eslint/eslint-plugin": "~7.18.0",
         "@typescript-eslint/eslint-plugin-tslint": "~7.0.2",
         "@typescript-eslint/parser": "~7.18.0",
         "angular-in-memory-web-api": "~0.21.0",
         "eslint": "^8.57.0",
         "eslint-plugin-import": "~2.31.0",
-        "jest": "~30.2.0",
-        "jest-environment-jsdom": "~30.2.0",
-        "jest-preset-angular": "~16.1.0",
+        "jsdom": "~28.1.0",
         "prettier": "~3.6.2",
-        "typescript": "~5.9.3"
+        "typescript": "~5.9.3",
+        "vitest": "~4.0.18"
     }
 }
