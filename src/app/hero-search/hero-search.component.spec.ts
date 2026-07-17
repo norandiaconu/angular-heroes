@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HeroSearchComponent } from './hero-search.component';
 import { provideHttpClient } from '@angular/common/http';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { HeroSearchComponent } from './hero-search.component';
 
 describe('HeroSearchComponent', () => {
     let component: HeroSearchComponent;

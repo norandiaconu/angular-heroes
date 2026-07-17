@@ -1,12 +1,12 @@
 import { Component, OnInit, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-heroes',
     templateUrl: './heroes.component.html',
-    styleUrls: ['./heroes.component.css'],
+    styleUrls: ['./heroes.component.scss'],
     imports: [RouterLink]
 })
 export class HeroesComponent implements OnInit {

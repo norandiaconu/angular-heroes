@@ -1,19 +1,19 @@
-import { Injectable, inject } from '@angular/core';
-import { Hero } from './hero';
-import { Observable, of } from 'rxjs';
-import { MessageService } from './message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable, inject } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
+import { Hero } from './hero';
+import { MessageService } from './message.service';
 
 @Injectable({
-    providedIn: 'root',
+    providedIn: 'root'
 })
 export class HeroService {
     private readonly http = inject(HttpClient);
     private readonly messageService = inject(MessageService);
     private readonly heroesUrl = 'api/heroes';
     private httpOptions = {
-        headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+        headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
     public getHeroes(): Observable<Hero[]> {
@@ -41,14 +41,10 @@ export class HeroService {
     }
 
     public addHero(hero: Hero): Observable<Hero> {
-        return this.http
-            .post<Hero>(this.heroesUrl, hero, this.httpOptions)
-            .pipe(
-                tap((newHero: Hero) =>
-                    this.log(`added hero w/ id=${newHero.id}`)
-                ),
-                catchError(this.handleError<Hero>('addHero'))
-            );
+        return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
+            tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
+            catchError(this.handleError<Hero>('addHero'))
+        );
     }
 
     public deleteHero(hero: Hero | number): Observable<Hero> {

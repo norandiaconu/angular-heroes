@@ -1,14 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
-
 import { RouterLink } from '@angular/router';
+import { Hero } from '../hero';
 import { HeroSearchComponent } from '../hero-search/hero-search.component';
+import { HeroService } from '../hero.service';
 
 @Component({
     selector: 'app-dashboard',
     templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css'],
+    styleUrls: ['./dashboard.component.scss'],
     imports: [RouterLink, HeroSearchComponent]
 })
 export class DashboardComponent implements OnInit {

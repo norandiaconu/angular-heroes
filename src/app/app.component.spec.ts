@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages/messages.component';
-import { provideRouter } from '@angular/router';
 
 describe('AppComponent', () => {
     let fixture: ComponentFixture<AppComponent>;

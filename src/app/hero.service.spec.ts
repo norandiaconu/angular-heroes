@@ -1,6 +1,7 @@
-import { TestBed } from '@angular/core/testing';
-import { HeroService } from './hero.service';
 import { provideHttpClient } from '@angular/common/http';
+import { TestBed } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
+import { HeroService } from './hero.service';
 
 describe('HeroService', () => {
     let service: HeroService;

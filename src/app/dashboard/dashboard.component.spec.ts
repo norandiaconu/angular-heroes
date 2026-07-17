@@ -1,7 +1,8 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { describe, it, expect, beforeEach } from 'vitest';
 import { HeroSearchComponent } from '../hero-search/hero-search.component';
 import { DashboardComponent } from './dashboard.component';
-import { provideHttpClient } from '@angular/common/http';
 
 describe('DashboardComponent', () => {
     let component: DashboardComponent;
